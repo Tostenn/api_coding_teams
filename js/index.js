@@ -59,7 +59,7 @@ generer.onclick = ()=>{
                     break
                 }
                 content.previousElementSibling.querySelector('small').innerHTML = "\
-                    <span>lg >> <i>"+(agurment.lg ? 'En' : 'Fr')+"</i> </span>\
+                    <span>lg >> <i>"+(agurment.lg == 'en' ? 'En' : 'Fr')+"</i> </span>\
                     <span>mode >><i>"+agurment.mode+"</i></span>"
             })
         // .catch(() => {
