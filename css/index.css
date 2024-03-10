@@ -1,0 +1,125 @@
+html{
+    --cl-red:#dc3545;
+    --cl-bleu:#0d6efd;
+    --cl-green:#198754;
+    --cl-blanc:#fff;
+    --cl-code:#161b21;
+    --cl-yellow:#ffc107;
+    --cl-purple:#6c5ce7;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: var(--cl-code);
+    color: var(--cl-blanc);
+}
+header h1{
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 5px;
+}
+header .icon{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 50%;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    & img{
+        margin: 0 auto;
+    }
+}
+header button.button-custom{
+    font-size: 18px;
+}
+
+#setting, #output{
+    width: 90%;
+    margin: 20px auto;
+    background-color: var(--cl-code);
+    border-radius: 20px;
+    padding: 15px; 
+}
+
+:is(#setting, #output) h2{
+    color: var(--cl-blanc);
+    padding: 10px 0;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+#setting #lg{
+    display: inline-block;
+    width: 48%;
+}
+#setting .gr{
+    padding: 10px 0;
+}
+
+.button-custom {
+    transform: translatey(-3px);
+    border: none;
+    outline: none;
+    background-color: var(--cl-purple);
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    transition: all ease 0.1s;
+    box-shadow: 0px 5px 0px 0px #a29bfe;
+    width: 49%
+} 
+.button-custom:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px #a29bfe;
+}
+
+#output .content{
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--cl-blanc);
+    background-color: #000;
+    padding: 15px;
+    border-radius: 20px;
+}
+#output .content.error{
+    color: var(--cl-red);
+}
+#output .content.alert{
+    color: var(--cl-yellow);
+}
+
+@media screen and (min-width:700px) {
+    header{
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+    header .icon{
+        flex-flow: row;
+        justify-content: start;
+        & img{
+            width: 50px;
+            margin: 0 20px 0 0 ;
+            background-color: var(--cl-purple);
+            border-radius: 50%;
+        }
+    }
+    header a{
+        display: block;
+        width: 300px;
+    }
+    header button.button-custom{
+        display: block;
+        transform: translateY(5px);
+    }
+    #setting, #output{
+        width: 50%;
+    }
+}

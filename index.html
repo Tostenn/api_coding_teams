@@ -3,11 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Manipulation d'API</title>
+    <link rel="shortcut icon" href="img/ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/custom-select.css">
 </head>
 <body>
+    <header>
+        <div class="icon">
+            <img src="img/ico.ico" width="200" alt="">
+            <h1>t_xox_t</h1>
+        </div>
+        <a href="#">
+            <button class="button-custom">code source</button>
+        </a>
+    </header>
+
+    <section id="setting">
+        <h2>option </h2>
+        <form>
+            <div class="custom-select">
     
-    <script src="index.js"></script>
+                <select name="mode" id="mode">
+                    <option value="">selection une methode</option>
+                    <option value="dev">pour developpeur</option>
+                    <option value="lesaviezvous">chose incroyable</option>
+                    <option value="citation">citation</option>
+                    <option value="random">aleatoire</option>
+                </select>
+    
+            </div>
+    
+            <div class="gr">
+    
+                <div class="custom-select" id="lg">
+                    
+                    <select name="lg" id="lgs">
+                        <option value="">langue</option>
+                        <option value="">francais</option>
+                        <option value="en">anglais</option>
+                    </select>
+                    
+                </div>
+                <button class="button-custom">generer</button>
+            </div>
+            
+        </form>
+    </section>
+
+    <section id="output">
+        <h2>output : <small></small></h2>
+
+        <div class="content"></div>
+        
+    </section>
+
+    <script src="js/index.js"></script>
+    <script src="js/select-custom.js"></script>
 </body>
 </html>
